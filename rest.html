@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Management System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, sans-serif;
+            background: #f6f4ef;
+        }
+
+        header {
+            background: #2c2b30;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            background: #a47449;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        h2 {
+            color: #7b655a;
+            border-left: 5px solid #a47449;
+            padding-left: 10px;
+            font-size: 28px;
+        }
+
+        .menu-items {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .item {
+            background: white;
+            width: 280px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .item img {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .item h3 {
+            margin: 10px 0 5px;
+        }
+
+        .item p {
+            margin: 0;
+            font-size: 15px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #a47449;
+            color: white;
+        }
+
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            border-radius: 8px;
+            border: 1px solid #b8b2ad;
+            font-size: 16px;
+        }
+
+        button {
+            background: #a47449;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #8c6140;
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #2c2b30;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>Restaurant Management System</header>
+
+<nav>
+    <a href="#menu">Menu</a>
+    <a href="#reserve">Reservations</a>
+    <a href="#orders">Orders</a>
+    <a href="#salary">Employee Salary</a>
+    <a href="#apply">Employee Application</a>
+</nav>
+
+<!-- MENU SECTION -->
+<div class="section" id="menu">
+    <h2>Food Menu</h2>
+
+    <div class="menu-items">
+        <div class="item">
+            <img src="https://i.imgur.com/ONo6x2H.jpeg" alt="Pizza">
+            <h3>Italian Pizza</h3>
+            <p>$12 • Classic cheese & tomato</p>
+        </div>
+
+        <div class="item">
+            <img src="https://i.imgur.com/tIQVxWu.jpeg" alt="Burger">
+            <h3>Beef Burger</h3>
+            <p>$10 • Served with fries</p>
+        </div>
+
+        <div class="item">
+            <img src="https://i.imgur.com/XM3TQk1.jpeg" alt="Pasta">
+            <h3>Chicken Pasta</h3>
+            <p>$14 • Creamy Alfredo sauce</p>
+        </div>
+
+        <div class="item">
+            <img src="https://i.imgur.com/2Jg7QK0.jpeg" alt="Sushi">
+            <h3>Sushi Platter</h3>
+            <p>$18 • Fresh salmon & tuna</p>
+        </div>
+    </div>
+</div>
+
+<!-- RESERVATION SECTION -->
+<div class="section" id="reserve">
+    <h2>Table Reservations</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="date" required>
+        <input type="time" required>
+        <input type="number" placeholder="Number of Guests" required>
+        <button>Reserve Table</button>
+    </form>
+</div>
+
+<!-- ORDERS SECTION -->
+<div class="section" id="orders">
+    <h2>Order Management</h2>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Food Item</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>#101</td>
+            <td>Anna</td>
+            <td>Pizza</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>#102</td>
+            <td>James</td>
+            <td>Sushi</td>
+            <td>In Progress</td>
+        </tr>
+        <tr>
+            <td>#103</td>
+            <td>Maria</td>
+            <td>Burger</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+</div>
+
+<!-- SALARY SECTION -->
+<div class="section" id="salary">
+    <h2>Employee Salary Table</h2>
+    <table>
+        <tr>
+            <th>Position</th>
+            <th>Monthly Salary</th>
+        </tr>
+        <tr>
+            <td>Chef</td>
+            <td>$3000</td>
+        </tr>
+        <tr>
+            <td>Waiter</td>
+            <td>$1800</td>
+        </tr>
+        <tr>
+            <td>Cleaner</td>
+            <td>$1200</td>
+        </tr>
+        <tr>
+            <td>Manager</td>
+            <td>$4000</td>
+        </tr>
+    </table>
+</div>
+
+<!-- EMPLOYEE APPLICATION FORM -->
+<div class="section" id="apply">
+    <h2>Employee Application Form</h2>
+
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Phone Number" required>
+
+        <select required>
+            <option value="">Select Job Position</option>
+            <option>Chef</option>
+            <option>Waiter</option>
+            <option>Cleaner</option>
+            <option>Cashier</option>
+            <option>Manager</option>
+        </select>
+
+        <textarea rows="4" placeholder="Why should we hire you?" required></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+<footer>
+    © 2025 Restaurant Management System • All Rights Reserved
+</footer>
+
+</body>
+</html>
